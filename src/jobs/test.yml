@@ -1,0 +1,14 @@
+description: >
+  Sample description
+# What will this job do?
+
+executor: default
+
+steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: go get ./...
+      - run:
+          name: Run tests
+          command: go test -v
